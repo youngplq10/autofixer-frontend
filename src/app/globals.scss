@@ -1,1 +1,44 @@
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
+body {
+    background-color: #1e1e1e;
+}
+*{
+    font-family: 'Inter', sans-serif;
+}
+.navbar-hero-container {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: left top;
+  background-repeat: no-repeat;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/hero-bg.jpg");
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1;
+  }
+}
+
+.navbar-custom {
+  height: auto;
+  background-color: rgba(42, 42, 42, 0.6);
+  border-radius: 50px;
+}
+
+@media (min-width: 1200px) {
+  .mt-5-on-xl{
+    margin-top: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-hero-container{
+    height: auto;
+  }
+}
