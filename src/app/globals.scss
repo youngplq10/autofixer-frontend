@@ -26,6 +26,32 @@ body {
   }
 }
 
+.whyus-container{
+  background-color: rgba(0,0,0, 0.6);
+  z-index: 0;
+}
+
+.whyus-container{
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: left top;
+  background-repeat: no-repeat;
+  z-index: -1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/whyus-bg.jpg");
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: -1;
+  }
+}
+
 .navbar-custom {
   height: auto;
   background-color: rgba(42, 42, 42, 0.6);
@@ -36,9 +62,23 @@ body {
   .mt-5-on-xl{
     margin-top: 80px;
   }
+  .min-height-50-on-xl{
+    min-height: 50vh;
+  }
 }
 @media (max-width: 768px) {
   .navbar-hero-container{
+    height: auto;
+  }
+  .pb-5-on-sm{
+    padding-bottom: 40px;
+  }
+  .whyus-container{
+    height: auto;
+  }
+}
+@media (max-width: 992px) {
+  .whyus-container{
     height: auto;
   }
 }
