@@ -37,7 +37,7 @@ const Navbar = () => {
                         {['/o-nas', '/uslugi', '/#opinie', '/kontakt'].map((href, i) => (
                             <Link href={href} key={i} className="text-decoration-none">
                                 <Typography variant="h4" color='text.primary'>
-                                    {['O nas', 'Usługi i Cennik', 'Opinie', 'Kontakt'][i]}
+                                    {['O nas', 'Cennik', 'Opinie', 'Kontakt'][i]}
                                 </Typography>
                             </Link>
                         ))}
@@ -50,7 +50,7 @@ const Navbar = () => {
                             <div key={i} className="my-2">
                                 <Link href={href} className="text-decoration-none hover-underline">
                                     <Typography variant="h4" color='text.primary'>
-                                        {['O nas', 'Usługi i Cennik', 'Opinie', 'Kontakt'][i]}
+                                        {['O nas', 'Cennik', 'Opinie', 'Kontakt'][i]}
                                     </Typography>
                                 </Link>
                             </div>
