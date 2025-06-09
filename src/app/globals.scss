@@ -82,3 +82,8 @@ body {
     height: auto;
   }
 }
+.quickpricing-container{
+  background: #050505;
+  background: linear-gradient(325deg, rgba(0, 0, 0, 1) 10%, rgba(10, 10, 10, 1) 20%, rgba(15, 15, 15, 1) 40%, rgba(21, 21, 21, 1) 70%, rgba(37, 37, 37, 1) 90%);
+  min-height: 100vh;
+}

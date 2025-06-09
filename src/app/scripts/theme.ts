@@ -18,7 +18,7 @@ export const lightTheme = createTheme ({
   typography: {
     fontFamily: 'Inter',
     h1: {
-      fontSize: 64,
+      fontSize: 58,
       fontWeight: 300,
       letterSpacing: '0em',
     },

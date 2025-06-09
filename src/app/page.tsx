@@ -1,5 +1,6 @@
 import Hero from "./modules/Hero"
 import Navbar from "./modules/Navbar"
+import QuickPricing from "./modules/QuickPricing"
 import WhyUs from "./modules/WhyUs"
 
 const Home = () => {
@@ -21,6 +22,14 @@ const Home = () => {
             <div className="container-lg">
               <div className="row justify-content-center">
                 <WhyUs />
+              </div>
+            </div>
+          </div>
+
+          <div className="container-fluid quickpricing-container">
+            <div className="container-lg">
+              <div className="row justify-content-center">
+                <QuickPricing />
               </div>
             </div>
           </div>
