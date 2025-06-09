@@ -1,3 +1,4 @@
+import Footer from "./modules/Footer"
 import Hero from "./modules/Hero"
 import Navbar from "./modules/Navbar"
 import QuickPricing from "./modules/QuickPricing"
@@ -40,6 +41,12 @@ const Home = () => {
               <div className="row justify-content-center">
                 <Ratings />
               </div>
+            </div>
+          </div>
+
+          <div className="container-fluid footer-container">
+            <div className="row text-end mx-4 py-3">
+              <Footer />
             </div>
           </div>
         </>
