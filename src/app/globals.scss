@@ -8,48 +8,16 @@ body {
 .navbar-hero-container {
   position: relative;
   height: 100vh;
-  background-size: cover;
-  background-position: left top;
-  background-repeat: no-repeat;
-  z-index: 0;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("/assets/hero-bg.jpg");
-    background-size: cover;
-    background-position: left top;
-    background-repeat: no-repeat;
-    opacity: 0.3;
-    z-index: -1;
-  }
-}
-
-.whyus-container{
-  background-color: rgba(0,0,0, 0.6);
-  z-index: 0;
 }
 
 .whyus-container{
   position: relative;
   height: 100vh;
-  background-size: cover;
-  background-position: left top;
-  background-repeat: no-repeat;
-  z-index: -1;
+  background: linear-gradient(120deg, #111111 0%, #000000 100%);
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("/assets/whyus-bg.jpg");
-    background-size: cover;
-    background-position: left top;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    z-index: -1;
-  }
 }
 
 .navbar-custom {
@@ -83,19 +51,15 @@ body {
   }
 }
 .quickpricing-container{
-  background: #050505;
-  background: linear-gradient(325deg, rgba(0, 0, 0, 1) 10%, rgba(10, 10, 10, 1) 20%, rgba(15, 15, 15, 1) 40%, rgba(21, 21, 21, 1) 70%, rgba(37, 37, 37, 1) 90%);
+  background: radial-gradient(circle at 30% 30%, #161616 0%, #000000 100%);
   min-height: 100vh;
 }
 
 .ratings-container {
   height: 100vh;
-  background-image: url("/assets/ratings-bg.jpg");
-  background-size: cover;
-  background-position: left top;
-  background-repeat: no-repeat;
+  background: linear-gradient(to bottom, #0f0f0f 0%, #000000 100%);
 }
 
 .footer-container{
-  background-color: #000;
+  background: linear-gradient(to top, #000000, #0a0a0a);
 }
