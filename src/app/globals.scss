@@ -56,10 +56,41 @@ body {
 }
 
 .ratings-container {
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(to bottom, #0f0f0f 0%, #000000 100%);
 }
 
 .footer-container{
   background: linear-gradient(to top, #000000, #0a0a0a);
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0, 0);
+    filter: none;
+  }
+  20% {
+    transform: translate(-2px, 2px);
+    filter: hue-rotate(20deg) brightness(1.2);
+  }
+  40% {
+    transform: translate(2px, -1px);
+    filter: contrast(1.2) brightness(0.9);
+  }
+  60% {
+    transform: translate(-1px, 1px);
+    filter: grayscale(0.5);
+  }
+  80% {
+    transform: translate(1px, -2px);
+    filter: hue-rotate(-20deg);
+  }
+  100% {
+    transform: translate(0, 0);
+    filter: none;
+  }
+}
+
+.glitch {
+  animation: glitch 0.5s linear;
 }

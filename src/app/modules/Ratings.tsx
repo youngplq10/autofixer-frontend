@@ -15,7 +15,7 @@ const Ratings = () => {
             </div>
 
             <div className='row'>
-                <div className='col-10 col-md-5 border rounded-3 bg-dark text-white p-4 me-5 my-2'>
+                <div className='col-12 col-md-5 border rounded-3 bg-dark text-white p-4 me-5 my-2'>
                         <Stack direction="row" gap={1}>
                             <StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarIcon />
                         </Stack>
@@ -28,7 +28,7 @@ const Ratings = () => {
                         </Stack>
                 </div>
 
-                <div className='col-10 col-md-5 border rounded-3 bg-dark text-white p-4 me-5 my-2'>
+                <div className='col-12 col-md-5 border rounded-3 bg-dark text-white p-4 me-5 my-2'>
                         <Stack direction="row" gap={1}>
                             <StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarIcon />
                         </Stack>

@@ -1,16 +1,28 @@
 "use client"
 
 import { Button, Chip, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import LocationPinIcon from '@mui/icons-material/LocationPin';
 import CallIcon from '@mui/icons-material/Call';
 import BuildIcon from '@mui/icons-material/Build';
 import Image from 'next/image';
 import audi from "@/app/assets/audi2.png";
+import audibroken from "@/app/assets/audi2broken.png";
+import { clearTimeout, setInterval } from 'timers';
 
 const Hero = () => {
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
+    const [broken, setBroken] = useState(true);
+
+    useEffect(() => {
+        const timeout = setInterval(() => {
+            setBroken(!broken);
+        }, 3000);
+
+        return () => clearTimeout(timeout);
+    }, [broken])
     
     return (
         <>
@@ -26,7 +38,7 @@ const Hero = () => {
             </div>
 
             <div className='col-12 col-xl-6 mt-5 d-flex justify-content-end align-items-end min-height-50-on-xl'>
-                <Image src={audi} alt='Audi' width={isSmallScreen ? 300 : 500} height={isSmallScreen ? 160 : 260} className='mt-5 me-5' />
+                <Image src={broken ? audibroken : audi} key={broken ? 'broken' : 'normal'} alt='Audi' width={isSmallScreen ? 300 : 500} height={isSmallScreen ? 160 : 260} className='mt-5 me-5 glitch' />
             </div>
         </>
     )

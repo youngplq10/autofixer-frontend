@@ -44,7 +44,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="container-fluid footer-container">
+          <div className="container-fluid footer-container py-3">
             <div className="row text-end mx-4 py-3">
               <Footer />
             </div>

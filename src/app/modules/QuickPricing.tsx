@@ -1,6 +1,6 @@
 "use client"
 
-import { Accordion, AccordionDetails, AccordionSummary, Button, FormControl, InputLabel, Select, Typography } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Button, FormControl, InputLabel, Select, Typography, useMediaQuery, useTheme } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 import porsche from "@/app/assets/porsche.webp"
@@ -8,6 +8,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import BuildIcon from '@mui/icons-material/Build';
 
 const QuickPricing = () => {
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <>
             <div className='row my-5 py-5 justify-content-center'>
@@ -46,7 +49,7 @@ const QuickPricing = () => {
                 <div className='col-12 col-lg-6'>
                     <Typography variant='h2' color='text.primary' className='fst-italic' style={{ fontWeight: 400 }}>Cennik dla Porsche 911 GT3RS</Typography>
 
-                    <Image src={porsche} width={400} height={400} alt='Porsche' />
+                    <Image src={porsche} width={isSmallScreen ? 350 : 400} height={isSmallScreen ? 350 : 400} alt='Porsche' />
                 </div>
 
                 <div className='col-12 col-lg-6'>
@@ -92,7 +95,7 @@ const QuickPricing = () => {
                         </AccordionDetails>
                     </Accordion>
 
-                    <Button variant='contained' className='my-3 py-2'><BuildIcon className='me-2' />Zobacz więcej</Button>
+                    <Button variant='contained' className='my-3 py-2 mb-5'><BuildIcon className='me-2' />Zobacz więcej</Button>
                 </div>
             </div>
         </>
