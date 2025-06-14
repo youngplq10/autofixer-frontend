@@ -2,14 +2,51 @@
 
 import { Accordion, AccordionDetails, AccordionSummary, Button, FormControl, InputLabel, Select, Typography, useMediaQuery, useTheme } from '@mui/material'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import porsche from "@/app/assets/porsche.webp"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import BuildIcon from '@mui/icons-material/Build';
+import axios from 'axios'
 
 const QuickPricing = () => {
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
+    type brand = { brandName : string }
+    type model = { modelName: string }
+    type gen = { genName: string }
+
+    const [brands, setBrands] = useState<brand[]>([])
+    const [models, setModels] = useState<model[]>([])
+    const [gens, setGens] = useState<gen[]>([])
+
+    const [selectedBrand, setSelectedBrand] = useState<string>()
+    const [selectedModel, setSelectedModel] = useState()
+    const [selectedGen, setSelectedGen] = useState()
+
+    useEffect(() => {
+        if (selectedBrand !== null) {
+            axios.get("http://localhost:8080/api/public/brands", {})
+            .then((res) => {
+                console.log(res)
+                setBrands(res.data.data)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+        }
+    }, [])
+
+    useEffect(() => {
+        axios.get("http://localhost:8080/api/public/models/" + selectedBrand, {})
+            .then((res) => {
+                console.log(res)
+                setModels(res.data.data)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }, [selectedBrand])
 
     return (
         <>
@@ -17,9 +54,14 @@ const QuickPricing = () => {
                 <div className='col-10 col-md-8 col-lg-3 mt-3'>
                     <FormControl sx={{ width: '100%', bgcolor: '#353B61', color: '#fff' }}>
                         <InputLabel className='text-white'>Marka</InputLabel>
-                        <Select native>
-                            <option value={1}>Option 1</option>
-                            <option value={2}>Option 2</option>
+                        <Select native onChange={(e) => setSelectedBrand(e.target.value)}>
+                            {
+                                brands.map((brand) => {
+                                    return (
+                                        <option key={brand.brandName} value={brand.brandName || ""}>{brand.brandName}</option>
+                                    )
+                                })
+                            }
                         </Select>
                     </FormControl>
                 </div>
@@ -27,9 +69,14 @@ const QuickPricing = () => {
                 <div className='col-10 col-md-8 col-lg-3 mt-3'>
                     <FormControl sx={{ width: '100%', bgcolor: '#353B61', color: '#fff' }}>
                         <InputLabel className='text-white'>Model</InputLabel>
-                        <Select native>
-                            <option value={1}>Option 1</option>
-                            <option value={2}>Option 2</option>
+                        <Select native disabled={selectedBrand === null ? true : false}>
+                            {
+                                models.map((model) => {
+                                    return (
+                                        <option key={model.modelName} value={model.modelName} onChange={() => setSelectedModel(model)}>{model.modelName}</option>
+                                    )
+                                })
+                            }
                         </Select>
                     </FormControl>
                 </div>

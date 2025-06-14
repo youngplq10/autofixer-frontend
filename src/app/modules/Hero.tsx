@@ -19,7 +19,7 @@ const Hero = () => {
     useEffect(() => {
         const timeout = setInterval(() => {
             setBroken(!broken);
-        }, 3000);
+        }, 2000);
 
         return () => clearTimeout(timeout);
     }, [broken])
