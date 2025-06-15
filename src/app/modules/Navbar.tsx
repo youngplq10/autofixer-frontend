@@ -4,6 +4,8 @@ import { Dialog, DialogContent, IconButton, Link, Stack, Typography } from '@mui
 import React, { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
+import Image from 'next/image'
+import logo from "@/app/assets/logo.png"
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -12,16 +14,12 @@ const Navbar = () => {
     
     return (
         <>
-            <nav className='navbar-custom my-4'>
+            <nav className='my-4'>
                 <div className="d-flex justify-content-between align-items-center mx-5 py-3">
 
                     <div>
                         <Link href="/" className='text-decoration-none'>
-                            <Stack direction="row" spacing={2}>
-                                <Typography variant='h4' color='text.primary' className=''>
-                                    AutoFixer
-                                </Typography>
-                            </Stack>
+                            <Image src={logo} width={150} height={30} alt='AutoFixer' />
                         </Link>
                     </div>
 

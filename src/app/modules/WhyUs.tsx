@@ -18,7 +18,7 @@ const WhyUs = () => {
 
                 <div className="col-12 col-md-10 col-lg-4 my-4">
                     <div className="border rounded-5 text-center">
-                        <Image src={service2} width={1000} height={1000} alt='Project image' style={{ width: '100%', height: 'auto'}} className='rounded-5' />
+                        <Image src={service1} width={1000} height={1000} alt='Project image' style={{ width: '100%', height: 'auto'}} className='rounded-5' />
                         <Typography variant='h4' color='text.primary' className='fw-bolder p-4'>Fachowa obsługa 🔧</Typography>
                         <Typography variant='h5' color='text.primary' className='px-4 pt-2 pb-5'>
                             Nasi mechanicy to doświadczeni specjaliści – szybko diagnozują i naprawiają usterki.
@@ -38,7 +38,7 @@ const WhyUs = () => {
 
                 <div className="col-12 col-md-10 col-lg-4 my-4">
                     <div className="border rounded-5 text-center">
-                        <Image src={service2} width={1000} height={1000} alt='Project image' style={{ width: '100%', height: 'auto' }} className='rounded-5' />
+                        <Image src={service3} width={1000} height={1000} alt='Project image' style={{ width: '100%', height: 'auto' }} className='rounded-5' />
                         <Typography variant='h4' color='text.primary' className='fw-bolder p-4'>Przejrzyste ceny 💰</Typography>
                         <Typography variant='h5' color='text.primary' className='px-5 pt-2 pb-5'>
                             Nie zaskoczymy Cię rachunkiem – zawsze wiesz, za co płacisz. 

@@ -7,7 +7,7 @@ import CallIcon from '@mui/icons-material/Call';
 import BuildIcon from '@mui/icons-material/Build';
 import Image from 'next/image';
 import audi from "@/app/assets/audi2.png";
-import audibroken from "@/app/assets/audi2broken.png";
+import audibroken from "@/app/assets/audi4broken.png";
 import { clearTimeout, setInterval } from 'timers';
 
 const Hero = () => {
@@ -29,11 +29,14 @@ const Hero = () => {
             <div className='col-12 col-xl-6 mt-5-on-xl'>
                 <Chip variant='filled' icon={<LocationPinIcon className='text-white' />} label="Elbląg i okolice" style={{ backgroundColor: "#3B588F" }} className='p-3' />
                 <Typography variant='h1' color="text.primary" className='fst-italic mt-4' style={{ fontWeight: 400 }}>Mobilny serwis samochodowy</Typography>
-                <Typography variant='h4' color='text.primary' style={{ fontWeight: 300 }} className='my-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Typography>
+                <Typography variant='h4' color='text.primary' style={{ fontWeight: 300 }} className='my-3'>
+                    Nie trać czasu na dojazdy do warsztatu! <br/>
+                    Profesjonalna naprawa Twojego auta - gdziekolwiek jesteś, kiedy tylko potrzebujesz.
+                </Typography>
 
                 <Stack direction="row" className='mt-4' gap={2}>
-                    <Button variant='outlined' className='py-2'><CallIcon className='me-2' />Zadzwoń do nas</Button>
-                    <Button variant='contained' className='py-2'><BuildIcon className='me-2' />Sprawdź usługi</Button>
+                    <Button variant='outlined' className='py-2' ><CallIcon className='me-2' />565-112-104</Button>
+                    <Button variant='contained' className='py-2' onClick={() => window.location.href = "/cennik"}><BuildIcon className='me-2' />Sprawdź usługi</Button>
                 </Stack>
             </div>
 

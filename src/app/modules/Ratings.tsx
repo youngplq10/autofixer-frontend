@@ -20,7 +20,7 @@ const Ratings = () => {
                             <StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarIcon />
                         </Stack>
 
-                        <Typography variant='body1' color='text.primary' className='my-3'>Lorem ipsum dolor sit amet consectetur. Diam vitae pulvinar lorem morbi at integer velit maecenas quisque. At a scelerisque leo facilisis gravida mi nibh ornare sem condimentum faucibus.</Typography>
+                        <Typography variant='body1' color='text.primary' className='my-3'>AutoFixer to prawdziwe wybawienie! Zepsuł mi się samochód w środku miasta, a oni przyjechali w ciągu pół godziny i naprawili problem na miejscu. Profesjonalizm i szybkość na najwyższym poziomie. Zdecydowanie polecam!</Typography>
                 
                         <Stack direction="row" gap={2}>
                             <Image src={p1} alt='Person 1' width={40} height={40} className='rounded-5'/>
@@ -33,7 +33,7 @@ const Ratings = () => {
                             <StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarIcon />
                         </Stack>
 
-                        <Typography variant='body1' color='text.primary' className='my-3'>Lorem ipsum dolor sit amet consectetur. Diam vitae pulvinar lorem morbi at integer velit maecenas quisque. At a scelerisque leo facilisis gravida mi nibh ornare sem condimentum faucibus.</Typography>
+                        <Typography variant='body1' color='text.primary' className='my-3'>Świetna obsługa i ogromna wygoda. Nie musiałem nigdzie jechać, a mechanik zadbał o mój samochód prosto pod moim domem. Ceny uczciwe, a jakość usług naprawdę solidna. AutoFixer to mój numer jeden w Elblągu!</Typography>
                 
                         <Stack direction="row" gap={2}>
                             <Image src={p2} alt='Person 1' width={40} height={40} className='rounded-5'/>
