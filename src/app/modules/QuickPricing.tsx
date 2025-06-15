@@ -1,11 +1,10 @@
 "use client"
 
-import { Accordion, AccordionDetails, AccordionSummary, Button, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, Typography, useMediaQuery, useTheme } from '@mui/material'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import porsche from "@/app/assets/porsche.webp"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import BuildIcon from '@mui/icons-material/Build';
 import axios from 'axios'
 
 const QuickPricing = () => {
@@ -38,7 +37,7 @@ const QuickPricing = () => {
                 console.log(err)
             })
         }
-    }, [])
+    }, [selectedBrand])
 
     useEffect(() => {
         axios.get(process.env.NEXT_PUBLIC_API + "/public/models/" + selectedBrand, {})
@@ -210,7 +209,7 @@ const QuickPricing = () => {
                                 {
                                     categories.map((category) => {
                                         return (
-                                            <Accordion sx={{ bgcolor: "#353B61" }} className='my-2'>
+                                            <Accordion key={category.title} sx={{ bgcolor: "#353B61" }} className='my-2'>
                                                 <AccordionSummary expandIcon={<ExpandMoreIcon className='text-white' />}><Typography variant='h4' color='text.primary'>{category.title}</Typography></AccordionSummary>
                                                 <AccordionDetails>
                                                     <Typography variant='h5' color='text.primary'>
@@ -218,7 +217,7 @@ const QuickPricing = () => {
                                                             {
                                                                 category.elements.map((element) => {
                                                                     return (
-                                                                        <li>{element.name} - {element.price}zł</li>
+                                                                        <li key={element.name}>{element.name} - {element.price}zł</li>
                                                                     )
                                                                 })
                                                             }

@@ -1,6 +1,6 @@
 "use client"
 
-import { Dialog, DialogContent, IconButton, Link, Stack, Typography } from '@mui/material'
+import { Dialog, DialogContent, IconButton, Link, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
