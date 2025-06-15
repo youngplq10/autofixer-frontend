@@ -1,6 +1,6 @@
 "use client"
 
-import { IconButton, Link, Stack, Typography } from '@mui/material'
+import { Dialog, DialogContent, IconButton, Link, Stack, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
@@ -34,31 +34,52 @@ const Navbar = () => {
                     </IconButton>
 
                     <div className={`d-none d-md-flex gap-4 nav-links`}>
-                        {['/o-nas', '/cennik', '/#opinie', '/kontakt'].map((href, i) => (
+                        {['/o-nas', '/cennik', '/#opinie'].map((href, i) => (
                             <Link href={href} key={i} className="text-decoration-none">
                                 <Typography variant="h4" color='text.primary'>
-                                    {['O nas', 'Cennik', 'Opinie', 'Kontakt'][i]}
+                                    {['O nas', 'Cennik', 'Opinie'][i]}
                                 </Typography>
                             </Link>
                         ))}
+
+                        <div>
+                            <Typography variant="h4" color='text.primary' onClick={() => setContactOpen(true)} className='hover-pointer'>
+                                Kontakt
+                            </Typography>
+                        </div>
                     </div>
                 </div>
 
                 {menuOpen && (
                     <div className="d-md-none mx-1 px-5 pb-3">
-                        {['/o-nas', '/cennik', '/#opinie', '/kontakt'].map((href, i) => (
+                        {['/o-nas', '/cennik', '/#opinie'].map((href, i) => (
                             <div key={i} className="my-2">
                                 <Link href={href} className="text-decoration-none hover-underline">
                                     <Typography variant="h4" color='text.primary'>
-                                        {['O nas', 'Cennik', 'Opinie', 'Kontakt'][i]}
+                                        {['O nas', 'Cennik', 'Opinie'][i]}
                                     </Typography>
                                 </Link>
                             </div>
                         ))}
+
+                        <div className="my-2">
+                            <Typography variant="h4" color='text.primary' onClick={() => setContactOpen(true)} className='hover-pointer'>
+                                Kontakt
+                            </Typography>
+                        </div>
                     </div>
                 )}
                 
             </nav>
+
+            <Dialog open={contactOpen} onClose={() => setContactOpen(false)}>
+                <DialogContent>
+                    <Typography variant='h5' color='text.primary' className='my-2'>Przykładowe dane nieistniejącej marki:</Typography>
+                    <Typography variant='h5' color='text.primary' className='my-2'>82-300 Elbląg</Typography>
+                    <Typography variant='h5' color='text.primary' className='my-2'>Giermków 23/2</Typography>
+                    <Typography variant='h5' color='text.primary' className='my-2'>Tel. 565-112-104</Typography>
+                </DialogContent>
+            </Dialog>
         </>
     )
 }
