@@ -34,7 +34,7 @@ const Navbar = () => {
                     </IconButton>
 
                     <div className={`d-none d-md-flex gap-4 nav-links`}>
-                        {['/o-nas', '/uslugi', '/#opinie', '/kontakt'].map((href, i) => (
+                        {['/o-nas', '/cennik', '/#opinie', '/kontakt'].map((href, i) => (
                             <Link href={href} key={i} className="text-decoration-none">
                                 <Typography variant="h4" color='text.primary'>
                                     {['O nas', 'Cennik', 'Opinie', 'Kontakt'][i]}
@@ -46,7 +46,7 @@ const Navbar = () => {
 
                 {menuOpen && (
                     <div className="d-md-none mx-1 px-5 pb-3">
-                        {['/o-nas', '/uslugi', '/#opinie', '/kontakt'].map((href, i) => (
+                        {['/o-nas', '/cennik', '/#opinie', '/kontakt'].map((href, i) => (
                             <div key={i} className="my-2">
                                 <Link href={href} className="text-decoration-none hover-underline">
                                     <Typography variant="h4" color='text.primary'>

@@ -37,7 +37,7 @@ const Home = () => {
           </div>
 
           <div className="container-fluid ratings-container">
-            <div className="container-lg">
+            <div className="container-lg" id="opinie">
               <div className="row justify-content-center">
                 <Ratings />
               </div>
