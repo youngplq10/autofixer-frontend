@@ -28,7 +28,7 @@ const QuickPricing = () => {
 
     useEffect(() => {
         if (selectedBrand !== null) {
-            axios.get(process.env.NEXT_PUBLIC_API + "/public/brands", {})
+            axios.get("/public/brands", {})
             .then((res) => {
                 console.log(res)
                 setBrands(res.data.data)
@@ -40,7 +40,7 @@ const QuickPricing = () => {
     }, [selectedBrand])
 
     useEffect(() => {
-        axios.get(process.env.NEXT_PUBLIC_API + "/public/models/" + selectedBrand, {})
+        axios.get("/public/models/" + selectedBrand, {})
             .then((res) => {
                 console.log(res)
                 setModels(res.data.data)
@@ -51,7 +51,7 @@ const QuickPricing = () => {
     }, [selectedBrand])
 
     useEffect(() => {
-        axios.get(process.env.NEXT_PUBLIC_API + "/public/gens/" + selectedModel, {})
+        axios.get("/public/gens/" + selectedModel, {})
             .then((res) => {
                 console.log(res)
                 setGens(res.data.data)
@@ -62,7 +62,7 @@ const QuickPricing = () => {
     }, [selectedModel])
 
     useEffect(() => {
-        axios.get(process.env.NEXT_PUBLIC_API + "/public/category/" + selectedGen, {})
+        axios.get("/public/category/" + selectedGen, {})
             .then((res) => {
                 console.log(res.data.data)
                 setCategories(res.data.data)

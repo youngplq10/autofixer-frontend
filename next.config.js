@@ -4,8 +4,8 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: '/api/public/:path*',
-        destination: `${backendServer}/api/public/:path*`,
+        source: '/public/:path*',
+        destination: `${backendServer}/public/:path*`,
       },
     ];
   },

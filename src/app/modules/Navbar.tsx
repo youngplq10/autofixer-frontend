@@ -72,10 +72,10 @@ const Navbar = () => {
 
             <Dialog open={contactOpen} onClose={() => setContactOpen(false)}>
                 <DialogContent>
-                    <Typography variant='h5' color='text.primary' className='my-2'>Przykładowe dane nieistniejącej marki:</Typography>
-                    <Typography variant='h5' color='text.primary' className='my-2'>82-300 Elbląg</Typography>
-                    <Typography variant='h5' color='text.primary' className='my-2'>Giermków 23/2</Typography>
-                    <Typography variant='h5' color='text.primary' className='my-2'>Tel. 565-112-104</Typography>
+                    <Typography variant='h5' color='text.primary' className='my-2'>📍 Adres: 82-300 Elbląg</Typography>
+                    <Typography variant='h5' color='text.primary' className='my-2'>🏢 Ulica: Giermków 23/2</Typography>
+                    <Typography variant='h5' color='text.primary' className='my-2'>📞 Telefon: Tel. 565-112-104</Typography>
+
                 </DialogContent>
             </Dialog>
         </>
